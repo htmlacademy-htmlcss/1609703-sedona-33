@@ -64,7 +64,21 @@
                     class="breadcrumbs-link"
                     href="index.html"
                     aria-label="На главную"
-                  ></a>
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 0.300049L0 5.80005V12H12V5.80005L6 0.300049ZM11 11H1V6.20005L6 1.70005L11 6.20005V11Z"
+                        fill="white"
+                      />
+                      <path d="M4 10H5V7.5H7V10H8V6.5H4V10Z" fill="white" />
+                    </svg>
+                  </a>
                 </li>
                 <li class="breadcrumbs-item">
                   <a class="breadcrumbs-link" href="#">Гостиницы</a>
@@ -75,82 +89,91 @@
 
           <h2 class="visually-hidden">Фильтры для поиска гостиниц Седоны</h2>
           <div class="catalog-filter-container">
-            <form>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфаструктура:</legend>
-                <label class="catalog-filter-item">
-                  <input type="checkbox" checked />
-                  Бассейн
-                </label>
-                <label class="catalog-filter-item">
-                  <input type="checkbox" checked />
-                  Парковка
-                </label>
-                <label class="catalog-filter-item">
-                  <input type="checkbox" />
-                  Wi-Fi
-                </label>
-              </fieldset>
+            <form class="filter-form-container">
+              <div class="infrastructure-container">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Инфаструктура:</legend>
+                  <label class="catalog-filter-item">
+                    <input type="checkbox" checked />
+                    Бассейн
+                  </label>
+                  <label class="catalog-filter-item">
+                    <input type="checkbox" checked />
+                    Парковка
+                  </label>
+                  <label class="catalog-filter-item">
+                    <input type="checkbox" />
+                    Wi-Fi
+                  </label>
+                </fieldset>
+              </div>
 
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип жилья:</legend>
-                <label class="catalog-filter-item">
-                  <input
-                    class="catalog-filter-item"
-                    type="radio"
-                    name="housing"
-                    value="hotel"
-                    checked
-                  />
-                  Гостиница
-                </label>
-                <label class="catalog-filter-item">
-                  <input
-                    class="catalog-filter-item"
-                    type="radio"
-                    name="housing"
-                    value="motel"
-                  />
-                  Мотель
-                </label>
-                <label class="catalog-filter-item">
-                  <input
-                    class="catalog-filter-item"
-                    type="radio"
-                    name="housing"
-                    value="apartment"
-                  />
-                  Апартаменты
-                </label>
-              </fieldset>
+              <div class="kind-of-house-container">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <label class="catalog-filter-item">
+                    <input
+                      class="catalog-filter-item"
+                      type="radio"
+                      name="housing"
+                      value="hotel"
+                      checked
+                    />
+                    Гостиница
+                  </label>
+                  <label class="catalog-filter-item">
+                    <input
+                      class="catalog-filter-item"
+                      type="radio"
+                      name="housing"
+                      value="motel"
+                    />
+                    Мотель
+                  </label>
+                  <label class="catalog-filter-item">
+                    <input
+                      class="catalog-filter-item"
+                      type="radio"
+                      name="housing"
+                      value="apartment"
+                    />
+                    Апартаменты
+                  </label>
+                </fieldset>
+              </div>
 
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Стоимость,₽:</legend>
               </fieldset>
-
-              <button class="apply-filter-button" type="submit">
-                Применить
-              </button>
-              <button class="reset-filter-button" type="reset">Сбросить</button>
+              <div class="filter-button-container">
+                <button class="apply-filter-button" type="submit">
+                  Применить
+                </button>
+                <button class="reset-filter-button" type="reset">
+                  Сбросить
+                </button>
+              </div>
             </form>
           </div>
         </section>
 
         <section class="catalog-sort">
-          <h2>Сортировка гостиниц Седоны</h2>
-          <p class="hotel-found">найдено гостиниц: <span>38</span></p>
-          <select class="sort-cheap">
-            <option value="cheap">Сначала дешёвые</option>
-          </select>
-          <a href="#">
-            <span class="visually-hidden">Показать картинки</span>
-          </a>
-          <a href="#">
-            <span class="visually-hidden">Показать слайдшоу</span>
-          </a>
-          <a href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <h2 class="visually-hidden">Сортировка гостиниц Седоны</h2>
+          <div class="sort-container">
+            <p class="hotel-found">найдено гостиниц: <span>38</span></p>
+            <select class="sort-cheap">
+              <option value="cheap">Сначала дешёвые</option>
+            </select>
+            <a href="#">
+              <span class="visually-hidden">Показать картинки</span>
+            </a>
+            <a href="#">
+              <span class="visually-hidden">Показать слайдшоу</span>
+            </a>
+            <a href="#">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
         </section>
         <section class="catalog">
           <ul>
