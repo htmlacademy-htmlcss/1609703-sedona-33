@@ -63,20 +63,36 @@ body {
 }
 
 .navigation-list {
-  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
   display: flex;
+  list-style: none;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 350px;
-  margin: 0;
-  padding: 0;
 }
 
 .navigation-user {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  margin-top: 24px;
   max-width: 270px;
   margin-left: auto;
 }
 
+.navigation-book-button {
+  background-color: #756257;
+  color: #ffffff;
+  padding: 9px 15px 8px 15px;
+}
+
+.welcome-image {
+  margin-top: 51px;
+  margin-left: 371px;
+}
 /* ____Подписка на рассылку___ */
 
 .mailing-index {
@@ -203,6 +219,12 @@ body {
   color: #000000;
   display: block;
   text-align: center;
+}
+
+.footer-social-list {
+  display: flex;
+  margin-left: 72px;
+  list-style-type: none;
 }
 
 /*_____________________________________________ Главная страница ___________________________________________________ */
