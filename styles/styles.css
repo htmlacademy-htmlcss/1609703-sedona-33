@@ -661,6 +661,39 @@ body {
   text-transform: uppercase;
 }
 
+.hotels-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 340px 340px 340px;
+  column-gap: 18px;
+  row-gap: 13px;
+  padding: 53px 72px 30px 72px;
+}
+
+.hotels-card {
+  width: 340px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  row-gap: 12px;
+  column-gap: 7px;
+  align-items: center;
+  padding: 20px;
+}
+.catalog-hotels-photo {
+  grid-column: span 3;
+}
+
+.card-link-title {
+  grid-column: 1/-1;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  text-decoration: none;
+}
+
 .more {
   font-size: 16px;
   font-weight: bold;
@@ -694,6 +727,7 @@ body {
   color: #000000;
 }
 .hotel-link {
+  grid-column: 1/-1;
   text-decoration: none;
 }
 
