@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "PT Sans";
-  font-style: bold;
+  font-style: normal;
   font-weight: 700;
   src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
@@ -25,24 +25,23 @@ html {
   box-sizing: inherit;
 }
 
-.page-header {
+body {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.16;
+  color: #000000;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.page-container {
   width: 1200px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-}
-
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 21px;
-  color: #333333;
-  background-color: gray;
 }
 
 img {
@@ -62,8 +61,10 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  padding: 0;
   border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -298,16 +299,19 @@ img {
 }
 
 .advantages-item-icon-house {
-  background: center top 89px/74px 70px no-repeat url("../images/house.svg");
+  background: center top 89px/74px 70px no-repeat
+    url("../images/icons/icon-house.svg");
   background-color: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-item-icon-food {
-  background: center top 89px/74px 70px no-repeat url("../images/food.svg");
+  background: center top 89px/74px 70px no-repeat
+    url("../images/icons/icon-food.svg");
 }
 
 .advantages-item-icon-gift {
-  background: center top 89px/74px 70px no-repeat url("../images/gift.svg");
+  background: center top 89px/74px 70px no-repeat
+    url("../images/icons/icon-gift.svg");
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -356,6 +360,7 @@ img {
   margin: 0;
   margin-bottom: 20px;
 }
+
 /* ____Поиск гостиницы (Заинтересовались?)___*/
 
 .hotel-search {
@@ -365,52 +370,52 @@ img {
   justify-content: flex-start;
 }
 
-.search-hotel-title {
-  text-transform: uppercase;
+.hotel-search-title {
+  font-weight: 700;
   font-size: 30px;
-  font-weight: bold;
-  line-height: 36px;
+  line-height: 1.2;
   text-align: center;
+  text-transform: uppercase;
   margin-top: 91px;
   margin-bottom: 29px;
 }
 
-.search-hotel-description {
+.hotel-search-description {
   width: 720px;
   font-size: 22px;
-  font-weight: normal;
-  line-height: 26px;
+  line-height: 1.181;
   text-align: center;
+  margin: 0;
   margin-bottom: 56px;
 }
 
-.search-hotel-button {
+.button-hotel-search {
   display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 36px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #ffffff;
-  background-color: #756257;
-  text-align: center;
-  margin-bottom: 92px;
-  min-width: 575px;
   box-sizing: border-box;
   padding: 12px 10px;
+  min-width: 575px;
+  min-height: 60px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  background: #756257;
   border-radius: 10px;
+  margin-bottom: 92px;
 }
 
-.search-hotel-button:hover {
+.button-hotel-search:hover {
   background-color: rgba(97, 80, 72, 1);
 }
 
-.search-hotel-button:focus-visible {
+.button-hotel-search:focus-visible {
   outline: 3px solid #83b3d3;
   background-color: rgba(97, 80, 72, 1);
 }
 
-.search-hotel-button:active {
+.button-hotel-search:active {
   background-color: rgba(97, 80, 72, 1);
   color: rgba(255, 255, 255, 0.3);
 }
@@ -438,7 +443,7 @@ img {
   margin-bottom: 29px;
 }
 
-.mailing-description {
+.mailing-descriotion {
   width: 470px;
   font-weight: 400;
   font-size: 22px;
@@ -460,7 +465,7 @@ img {
   min-height: 60px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 1.444;
   background: #f2f2f2;
   border-radius: 10px 0px 0px 10px;
   border: none;
@@ -486,7 +491,7 @@ img {
   min-height: 60px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 1.3;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -512,45 +517,110 @@ img {
 
 /* __Футер__ */
 
-.page-footer {
-  min-height: 120px;
+.footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-}
-
-.footer-number {
-  font-size: 40px;
-  font-weight: normal;
-  line-height: 40px;
-  color: #000000;
-  display: block;
-  text-align: center;
-  text-decoration: none;
+  width: 1069px;
+  height: 101px;
+  margin: 0 auto;
 }
 
 .footer-social-list {
-  padding: 0;
-  margin: 0;
-  width: 107px;
-  height: 18px;
   display: flex;
-  justify-content: space-between;
-  margin-left: 72px;
-  list-style-type: none;
+  justify-content: start;
+  flex-wrap: wrap;
+  align-items: baseline;
+  max-width: 180px;
+  list-style: none;
+  padding: 0;
 }
 
-.footer-logo {
-  margin-right: 72px;
+li.footer-social-item:first-child {
+  margin-left: -6px;
+}
+
+.footer-social-link {
+  padding: 5px 14px;
+}
+
+.footer-social-icon:hover path {
+  fill: rgba(104, 162, 202, 1);
+}
+
+.footer-social-link:focus-visible {
+  color: rgba(104, 162, 202, 1);
+  border-radius: 3px;
+  outline-color: #83b3d3;
+}
+
+.footer-social-link {
+  display: inline-block;
+  color: #83b3d3;
+}
+
+.footer-social-icon svg {
+  color: inherit;
+}
+
+.footer-social-icon:active path {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-contacts-address-phone {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  margin-right: 16px;
+  margin-left: 9px;
+}
+
+.footer-contacts-address-phone:hover {
+  color: rgba(117, 98, 87, 1);
+}
+
+.footer-contacts-address-phone:focus-visible {
+  color: rgba(117, 98, 87, 1);
+  outline: 3px solid #83b3d3;
+  border-radius: 10px;
+}
+
+.footer-contacts-address-phone:active {
+  color: rgba(117, 98, 87, 0.3);
+}
+
+.htmlacademy-link {
+  display: inline-block;
+  color: #000000;
+  margin-right: 5px;
+}
+
+.htmlacademy-icon svg {
+  color: inherit;
+}
+
+.htmlacademy-icon:hover {
+  color: rgb(117, 98, 87);
+}
+
+.htmlacademy-link:focus-visible {
+  color: rgb(117, 98, 87);
+  border-radius: 10px;
+  outline: 3px solid #83b3d3;
+  outline-offset: 10px;
+}
+
+.htmlacademy-icon:active {
+  color: rgb(117, 98, 87);
 }
 
 /*__________________________________________Каталог __________________________________________________ */
-
-.page-container {
-  background-color: white;
-  width: 1200px;
-  margin: 0 auto;
-}
 
 /*  _____Фильтры гостиниц____*/
 .catalog-filter {
