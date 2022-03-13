@@ -120,7 +120,9 @@
             </li>
             <li class="advantages-item advantages-item-icon-house">
               <h3 class="advantages-inner-title">Жильё</h3>
-              <p class="advantages-inner-description">
+              <p
+                class="advantages-inner-description advantages-description-six"
+              >
                 Рекомендуем пожить<br />
                 в настоящем мотеле,<br />
                 всё как в кино!
@@ -128,14 +130,18 @@
             </li>
             <li class="advantages-item advantages-item-icon-food">
               <h3 class="advantages-inner-title">Еда</h3>
-              <p class="advantages-inner-description">
+              <p
+                class="advantages-inner-description advantages-description-six"
+              >
                 Всегда заказывайте<br />топовый фирменный бургер, вы не
                 разочаруетесь!
               </p>
             </li>
             <li class="advantages-item advantages-item-icon-gift">
               <h3 class="advantages-inner-title">Сувениры</h3>
-              <p class="advantages-inner-description">
+              <p
+                class="advantages-inner-description advantages-description-six"
+              >
                 Не только китайского,<br />
                 но и настоящего местного производства!
               </p>
@@ -158,23 +164,29 @@
             </li>
             <li class="advantages-item advantages-card white-blue">
               <h3 class="advantages-title">Небольшая площадь</h3>
-              <span class="advantages-number">&#8212;№3&#8212;</span>
-              <p class="advantages-description">
+              <span class="advantages-number last-numbers"
+                >&#8212;№3&#8212;</span
+              >
+              <p class="advantages-description advantages-description-six">
                 Все&nbsp;достопримечательности<br />находятся очень близко
               </p>
             </li>
             <li class="advantages-item advantages-card light-blue">
               <h3 class="advantages-title">Красивая дорога</h3>
-              <span class="advantages-number">&#8212;№4&#8212;</span>
-              <p class="advantages-description">
+              <span class="advantages-number last-numbers"
+                >&#8212;№4&#8212;</span
+              >
+              <p class="advantages-description advantages-description-six">
                 Ехать в Седону из Лас-Вегаса<br />
                 совсем не скучно!
               </p>
             </li>
             <li class="advantages-item advantages-card white-blue">
               <h3 class="advantages-title">Мало туристов</h3>
-              <span class="advantages-number">&#8212;№5&#8212;</span>
-              <p class="advantages-description">
+              <span class="advantages-number last-numbers"
+                >&#8212;№5&#8212;</span
+              >
+              <p class="advantages-description advantages-description-six">
                 Большинство едет в Гранд Каньон и толпится там
               </p>
             </li>
@@ -211,6 +223,7 @@
               placeholder="Ваш e-mail"
               type="email"
               name="newsletter-email"
+              required
             />
             <button class="button newsletter-button" type="submit">
               Подписаться
@@ -240,7 +253,7 @@
                     fill="currentColor"
                   />
                 </svg>
-                <span class="visually-hidden">Тветтер.</span>
+                <span class="visually-hidden">Твиттер.</span>
               </a>
             </li>
             <li class="footer-social-item">
@@ -316,7 +329,11 @@
           <div class="modal-container">
             <div class="modal-header">
               <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-              <button class="button close-modal" aria-label="Закрыть окно.">
+              <button
+                type="button"
+                class="button close-modal"
+                aria-label="Закрыть окно."
+              >
                 <svg
                   width="13"
                   height="13"
@@ -346,6 +363,7 @@
                   type="text"
                   value=""
                   placeholder="Укажите дату"
+                  required
                 />
                 <button
                   class="button input-calendar-arrival"
@@ -366,6 +384,7 @@
                   id="departure-date"
                   type="text"
                   placeholder="Укажите дату"
+                  required
                 />
                 <button
                   class="button input-calendar-departure"
@@ -427,11 +446,7 @@
               </div>
               <label class="children-label" for="children-number"
                 >Дети:
-                <button
-                  class="button info-children"
-                  id="children-number"
-                  type="button"
-                >
+                <button class="button info-children" type="button">
                   <svg
                     width="1"
                     height="9"
@@ -470,6 +485,7 @@
                 </button>
                 <input
                   class="children-number"
+                  id="children-number"
                   type="number"
                   value="1"
                   step="1"
